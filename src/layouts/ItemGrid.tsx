@@ -2,8 +2,8 @@ import data from "../data/data.json";
 import CartButton from "../components/CartButton";
 function ItemGrid() {
   return (
-    <div className="grid grid-col-1 h-full overflow-y-scroll">
-      <ul>
+    <div className=" h-full overflow-y-scroll">
+      <ul className="grid grid-cols-1 ">
         {data.map((data) => {
           return (
             <li key={data.name} className="p-4 flex flex-col">
@@ -13,10 +13,10 @@ function ItemGrid() {
                   <CartButton />
                 </div>
               </div>
-              <div>
+              <div className="text-rose-900">
                 <p className="text-sm">{data.category}</p>
-                <p>{data.name}</p>
-                <p>{data.price}</p>
+                <p className="font-semibold">{data.name}</p>
+                <p className="text-red font-semibold">${data.price}</p>
               </div>
             </li>
           );
