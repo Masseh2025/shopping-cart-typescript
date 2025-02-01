@@ -1,7 +1,7 @@
 import { twMerge } from "tailwind-merge";
-import { clsx } from "clsx";
+import { clsx, ClassValue } from "clsx";
 
-function cn(...inputs: string[]) {
+function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
